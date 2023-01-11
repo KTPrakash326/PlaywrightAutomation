@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="chromeTest(failed)">
+    <parameter name="appURL" value="https://askomdch.com"/>
+    <parameter name="browserType" value="chrome"/>
+    <classes>
+      <class name="com.ecommerce.testCases.StorePageTest">
+        <methods>
+          <include name="verifyUrlTest"/>
+          <include name="navigateToStoreTest"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.ecommerce.testCases.StorePageTest -->
+    </classes>
+  </test> <!-- chromeTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

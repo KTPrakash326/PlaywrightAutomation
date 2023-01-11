@@ -1,0 +1,269 @@
+<html>
+<head>
+<title>TestNG:  Chwwrome Browser Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Chwwrome Browser Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>10/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jan 05 16:57:52 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>94 seconds (94652 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.ecommerce.testCases.HomeTest.homePageTitleTest()'><b>homePageTitleTest</b><br>Test class: com.ecommerce.testCases.HomeTest</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Execution context was destroyed, most likely because of a navigation
+  name=&apos;Error
+  stack=&apos;Error: Execution context was destroyed, most likely because of a navigation
+    at Frame._contextDestroyed (C:\Users\PRAKAS~1\AppData\Local\Temp\playwright-java-3631382120855469326\package\lib\server\frames.js:1708:30)
+    at FrameSession._onExecutionContextDestroyed (C:\Users\PRAKAS~1\AppData\Local\Temp\playwright-java-3631382120855469326\package\lib\server\chromium\crPage.js:759:19)
+    at FrameSession._onExecutionContextsCleared (C:\Users\PRAKAS~1\AppData\Local\Temp\playwright-java-3631382120855469326\package\lib\server\chromium\crPage.js:763:79)
+    at CRSession.&lt;anonymous&gt; (C:\Users\PRAKAS~1\AppData\Local\Temp\playwright-java-3631382120855469326\package\lib\server\chromium\crPage.js:484:1955)
+    at CRSession.emit (node:events:513:28)
+    at C:\Users\PRAKAS~1\AppData\Local\Temp\playwright-java-3631382120855469326\package\lib\server\chromium\crConnection.js:232:14
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:113)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:98)
+	at com.microsoft.playwright.impl.FrameImpl.titleImpl(FrameImpl.java:818)
+	at com.microsoft.playwright.impl.PageImpl.lambda$title$78(PageImpl.java:1247)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.PageImpl.title(PageImpl.java:1247)
+	at com.ecommerce.pages.Homepage.getHomePageTitle(Homepage.java:17)
+	at com.ecommerce.testCases.HomeTest.homePageTitleTest(HomeTest.java:14)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Execution context was destroyed, most likely because of a navigation
+  name=&apos;Error
+  stack=&apos;Error: Execution context was destroyed, most likely because of a navigation
+    at Frame._contextDestroyed (C:\Users\PRAKAS~1\AppData\Local\Temp\playwright-java-3631382120855469326\package\lib\server\frames.js:1708:30)
+    at FrameSession._onExecutionContextDestroyed (C:\Users\PRAKAS~1\AppData\Local\Temp\playwright-java-3631382120855469326\package\lib\server\chromium\crPage.js:759:19)
+    at FrameSession._onExecutionContextsCleared (C:\Users\PRAKAS~1\AppData\Local\Temp\playwright-java-3631382120855469326\package\lib\server\chromium\crPage.js:763:79)
+    at CRSession.&lt;anonymous&gt; (C:\Users\PRAKAS~1\AppData\Local\Temp\playwright-java-3631382120855469326\package\lib\server\chromium\crPage.js:484:1955)
+    at CRSession.emit (node:events:513:28)
+    at C:\Users\PRAKAS~1\AppData\Local\Temp\playwright-java-3631382120855469326\package\lib\server\chromium\crConnection.js:232:14
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:195)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:175)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:113)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1132)
+	at com.microsoft.playwright.impl.PageImpl.lambda$screenshot$63(PageImpl.java:1071)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1071)
+	at com.ecommerce.factory.PlaywrightFactory.takeScreenshot(PlaywrightFactory.java:54)
+	at com.ecommerce.utilities.ExtentReportListener.onTestSkipped(ExtentReportListener.java:104)
+	... 17 more
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1159389264", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1159389264'><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Execution context was destroyed, most likely because of a navigation
+  name=&apos;Error
+  stack=&apos;Error: Execution context was destroyed, most likely because of a navigation
+    at Frame._contextDestroyed (C:\Users\PRAKAS~1\AppData\Local\Temp\playwright-java-3631382120855469326\package\lib\server\frames.js:1708:30)
+    at FrameSession._onExecutionContextDestroyed (C:\Users\PRAKAS~1\AppData\Local\Temp\playwright-java-3631382120855469326\package\lib\server\chromium\crPage.js:759:19)
+    at FrameSession._onExecutionContextsCleared (C:\Users\PRAKAS~1\AppData\Local\Temp\playwright-java-3631382120855469326\package\lib\server\chromium\crPage.js:763:79)
+    at CRSession.&lt;anonymous&gt; (C:\Users\PRAKAS~1\AppData\Local\Temp\playwright-java-3631382120855469326\package\lib\server\chromium\crPage.js:484:1955)
+    at CRSession.emit (node:events:513:28)
+    at C:\Users\PRAKAS~1\AppData\Local\Temp\playwright-java-3631382120855469326\package\lib\server\chromium\crConnection.js:232:14
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:113)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:98)
+	at com.microsoft.playwright.impl.FrameImpl.titleImpl(FrameImpl.java:818)
+	at com.microsoft.playwright.impl.PageImpl.lambda$title$78(PageImpl.java:1247)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.PageImpl.title(PageImpl.java:1247)
+	at com.ecommerce.pages.Homepage.getHomePageTitle(Homepage.java:17)
+	at com.ecommerce.testCases.HomeTest.homePageTitleTest(HomeTest.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Execution context was destroyed, most likely because of a navigation
+  name=&apos;Error
+  stack=&apos;Error: Execution context was destroyed, most likely because of a navigation
+    at Frame._contextDestroyed (C:\Users\PRAKAS~1\AppData\Local\Temp\playwright-java-3631382120855469326\package\lib\server\frames.js:1708:30)
+    at FrameSession._onExecutionContextDestroyed (C:\Users\PRAKAS~1\AppData\Local\Temp\playwright-java-3631382120855469326\package\lib\server\chromium\crPage.js:759:19)
+    at FrameSession._onExecutionContextsCleared (C:\Users\PRAKAS~1\AppData\Local\Temp\playwright-java-3631382120855469326\package\lib\server\chromium\crPage.js:763:79)
+    at CRSession.&lt;anonymous&gt; (C:\Users\PRAKAS~1\AppData\Local\Temp\playwright-java-3631382120855469326\package\lib\server\chromium\crPage.js:484:1955)
+    at CRSession.emit (node:events:513:28)
+    at C:\Users\PRAKAS~1\AppData\Local\Temp\playwright-java-3631382120855469326\package\lib\server\chromium\crConnection.js:232:14
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:195)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:175)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:113)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.PageImpl.screenshotImpl(PageImpl.java:1132)
+	at com.microsoft.playwright.impl.PageImpl.lambda$screenshot$63(PageImpl.java:1071)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.PageImpl.screenshot(PageImpl.java:1071)
+	at com.ecommerce.factory.PlaywrightFactory.takeScreenshot(PlaywrightFactory.java:54)
+	at com.ecommerce.utilities.ExtentReportListener.onTestSkipped(ExtentReportListener.java:104)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:90)
+	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:276)
+	at org.testng.internal.invokers.TestInvoker.invokeListenersForSkippedTestResult(TestInvoker.java:512)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:611)
+	... 17 more
+</pre></div></td>
+<td>0</td>
+<td>com.ecommerce.testCases.HomeTest@4c1f22f3</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.ecommerce.testCases.HomeTest.homePageUrlTest()'><b>homePageUrlTest</b><br>Test class: com.ecommerce.testCases.HomeTest</td>
+<td></td>
+<td>0</td>
+<td>com.ecommerce.testCases.HomeTest@4c1f22f3</td></tr>
+<tr>
+<td title='com.ecommerce.testCases.CartPageTest.applyCouponCodeTest()'><b>applyCouponCodeTest</b><br>Test class: com.ecommerce.testCases.CartPageTest</td>
+<td></td>
+<td>1</td>
+<td>com.ecommerce.testCases.CartPageTest@5a755cc1</td></tr>
+<tr>
+<td title='com.ecommerce.testCases.CheckoutPageTest.proceedToCheckout()'><b>proceedToCheckout</b><br>Test class: com.ecommerce.testCases.CheckoutPageTest</td>
+<td></td>
+<td>3</td>
+<td>com.ecommerce.testCases.CheckoutPageTest@7ae42ce3</td></tr>
+<tr>
+<td title='com.ecommerce.testCases.StorePageTest.storePageUrlTest()'><b>storePageUrlTest</b><br>Test class: com.ecommerce.testCases.StorePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.ecommerce.testCases.StorePageTest@598bd2ba</td></tr>
+<tr>
+<td title='com.ecommerce.testCases.HomeTest.homePageLogoTest()'><b>homePageLogoTest</b><br>Test class: com.ecommerce.testCases.HomeTest</td>
+<td></td>
+<td>0</td>
+<td>com.ecommerce.testCases.HomeTest@4c1f22f3</td></tr>
+<tr>
+<td title='com.ecommerce.testCases.StorePageTest.searchProductTest()'><b>searchProductTest</b><br>Test class: com.ecommerce.testCases.StorePageTest</td>
+<td></td>
+<td>11</td>
+<td>com.ecommerce.testCases.StorePageTest@598bd2ba</td></tr>
+<tr>
+<td title='com.ecommerce.testCases.StorePageTest.navigateToStorePageTest()'><b>navigateToStorePageTest</b><br>Test class: com.ecommerce.testCases.StorePageTest</td>
+<td></td>
+<td>1</td>
+<td>com.ecommerce.testCases.StorePageTest@598bd2ba</td></tr>
+<tr>
+<td title='com.ecommerce.testCases.CartPageTest.navigateToCartPageTest()'><b>navigateToCartPageTest</b><br>Test class: com.ecommerce.testCases.CartPageTest</td>
+<td></td>
+<td>2</td>
+<td>com.ecommerce.testCases.CartPageTest@5a755cc1</td></tr>
+<tr>
+<td title='com.ecommerce.testCases.CheckoutPageTest.checkoutPageplaceOrderTest()'><b>checkoutPageplaceOrderTest</b><br>Test class: com.ecommerce.testCases.CheckoutPageTest</td>
+<td></td>
+<td>10</td>
+<td>com.ecommerce.testCases.CheckoutPageTest@7ae42ce3</td></tr>
+<tr>
+<td title='com.ecommerce.testCases.StorePageTest.addToCartTest()'><b>addToCartTest</b><br>Test class: com.ecommerce.testCases.StorePageTest</td>
+<td></td>
+<td>5</td>
+<td>com.ecommerce.testCases.StorePageTest@598bd2ba</td></tr>
+</table><p>
+</body>
+</html>
