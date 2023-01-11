@@ -1,0 +1,29 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Build') { 
+            steps {
+                echo("Build deployed")
+            }
+        }
+        
+        stage('Test') { 
+            steps {
+                git 'https://github.com/KTPrakash326/PlaywrightAutomation.git'
+                sh "mvn clean test" 
+            }
+        }
+        
+        stage('Publish Extent Report') { 
+            steps {
+                	publishHTML ([allowMissing: false,
+									 alwaysLinkToLastBuild: true,
+									 keepAll: true,
+									 reportDir: 'report',
+									 reportFiles: 'TestExecutionReport.html',
+									 reportName: 'HTML Extent Report',
+									 reportTitles: 'The Report'])
+            }
+        }
+    }
+}
